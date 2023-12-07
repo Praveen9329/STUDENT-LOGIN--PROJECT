@@ -1,0 +1,48 @@
+package com.techpalle.Controller;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.techpalle.Model.Developer;
+
+
+@WebServlet("/stu")
+public class StudentDeveloper extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		
+	String o=request.getParameter("tbSno");
+	String n=request.getParameter("tbSname");
+	String u=request.getParameter("tbSsubject");
+	
+	System.out.println(o);
+	System.out.println(n);
+	System.out.println(u);
+	
+	  Developer d= new Developer("Praveen","PK@gmail.com","Bangalore");
+	  
+	  request.setAttribute("hr", d);
+	  
+   RequestDispatcher rd=request.getRequestDispatcher("display.jsp");
+ 
+    rd.forward(request, response);
+ 
+	
+	}
+
+}
