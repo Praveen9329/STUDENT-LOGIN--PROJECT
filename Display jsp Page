@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="com.techpalle.Model.Developer" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Display page</title>
+</head>
+<body>
+        <h1>Welcome to Display Page </h1>
+        <h2>Sno:<%= request.getParameter("tbSno")%> </h2>
+        <h2>Sname:<%= request.getParameter("tbSname")%> </h2>
+        <h2>Ssubject:<%= request.getParameter("tbSsubject")%> </h2>
+        
+        <h2>Developer</h2>
+        <% Developer dJSP=(Developer)request.getAttribute("hr");%>
+        <h3>Name:<%=dJSP.getName() %></h3>
+        <h3>Email:<%=dJSP.getEmail() %></h3>
+        <h3>Location:<%=dJSP.getLocation() %></h3>
+        
+        
+        
+       <h1>Thank You...</h1>
+</body>
+</html>
