@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome StartUp Page</title>
+</head>
+<body>
+      <form action="stu" method="post">
+         <h1>Welcome Page</h1>
+      
+            <label for="tbSno">Sno:</label>
+            <input type="number" id="tbSno" name="tbSno" >
+            <br>
+            
+             <label for="tbSname">Sname:</label>
+            <input type="text" id="tbSname" name="tbSname" >
+            <br>
+            
+             <label for="tbSsubject">Ssubject:</label>
+            <input type="text" id="tbSsubject" name="tbSsubject" >
+            <br>
+            
+            <button>Submit</button>
+      </form>
+</body>
+</html>
